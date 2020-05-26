@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./number-slider.component.scss']
 })
 export class NumberSliderComponent implements OnInit {
+  // slider settings
   autoTicks = true;
   disabled = false;
   invert = false;
@@ -14,9 +15,11 @@ export class NumberSliderComponent implements OnInit {
   showTicks = true;
   step = 1;
   thumbLabel = true;
-  value = 0;
+  value = 8000;
   vertical = true;
   tickInterval = 1;
+
+  playing = false;
 
   constructor() { }
 

@@ -1,6 +1,17 @@
-<mat-card class="slider-style">
-  <mat-card-content>
+<mat-grid-list cols="4" rows="4" rowHeight="23%">
+  <mat-grid-tile colspan="3" rowspan="4">
+    <h1>
+      {{value}} Hz
+    </h1>
+  </mat-grid-tile>
+
+
+  <mat-grid-tile rowspan="3" colspan="1" class="slider-tile">
     <mat-slider [disabled]="disabled" [invert]="invert" [max]="max" [min]="min" [step]="step" [thumbLabel]="thumbLabel" [tickInterval]="getSliderTickInterval()" [(ngModel)]="value" [vertical]="vertical">
     </mat-slider>
-  </mat-card-content>
-</mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="1" rowspan="1">
+    <button *ngIf="playing" (click)="playing=!playing" mat-raised-button>Stop</button>
+    <button *ngIf="!playing" (click)="playing=!playing" mat-raised-button color="primary">Play</button>
+  </mat-grid-tile>
+</mat-grid-list>
