@@ -11,11 +11,16 @@ import { environment } from '../environments/environment';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSelectModule } from '@angular/material/select';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
+
+
+
 
 import { IosPopupComponent } from './ios-popup/ios-popup.component';
 import { ToneListComponent } from './tone-list/tone-list.component';
@@ -40,8 +45,10 @@ import { ToneDialogComponent } from './tone-dialog/tone-dialog.component';
     MatButtonModule,
     MatCardModule,
     MatDialogModule,
+    MatFormFieldModule,
     MatGridListModule,
     MatIconModule,
+    MatSelectModule,
     MatSliderModule,
     MatSnackBarModule,
     MatToolbarModule
