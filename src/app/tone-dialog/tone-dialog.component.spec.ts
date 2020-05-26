@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NumberSliderComponent } from './number-slider.component';
+import { ToneDialogComponent } from './tone-dialog.component';
 
-describe('NumberSliderComponent', () => {
-  let component: NumberSliderComponent;
-  let fixture: ComponentFixture<NumberSliderComponent>;
+describe('ToneDialogComponent', () => {
+  let component: ToneDialogComponent;
+  let fixture: ComponentFixture<ToneDialogComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NumberSliderComponent ]
+      declarations: [ ToneDialogComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NumberSliderComponent);
+    fixture = TestBed.createComponent(ToneDialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
