@@ -7,17 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NumberSliderComponent implements OnInit {
   // slider settings
-  autoTicks = true;
-  disabled = false;
-  invert = false;
   max = 20000;
-  min = 20;
-  showTicks = true;
-  step = 1;
+  min = 100;
+  step = 100;
   thumbLabel = true;
   value = 8000;
   vertical = true;
-  tickInterval = 1;
+  tickInterval = 1000;
 
   playing = false;
 
@@ -26,11 +22,4 @@ export class NumberSliderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  getSliderTickInterval(): number | 'auto' {
-    if (this.showTicks) {
-      return this.autoTicks ? 'auto' : this.tickInterval;
-    }
-
-    return 0;
-  }
 }

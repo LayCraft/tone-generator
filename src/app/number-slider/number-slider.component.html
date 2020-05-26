@@ -5,13 +5,13 @@
     </h1>
   </mat-grid-tile>
 
-
   <mat-grid-tile rowspan="3" colspan="1" class="slider-tile">
-    <mat-slider [disabled]="disabled" [invert]="invert" [max]="max" [min]="min" [step]="step" [thumbLabel]="thumbLabel" [tickInterval]="getSliderTickInterval()" [(ngModel)]="value" [vertical]="vertical">
+    <mat-slider color="primary" [disabled]="disabled" [max]="max" [min]="min" [step]="step" [thumbLabel]="thumbLabel" [(ngModel)]="value" [vertical]="vertical">
     </mat-slider>
   </mat-grid-tile>
+
   <mat-grid-tile colspan="1" rowspan="1">
-    <button *ngIf="playing" (click)="playing=!playing" mat-raised-button>Stop</button>
-    <button *ngIf="!playing" (click)="playing=!playing" mat-raised-button color="primary">Play</button>
+    <button *ngIf="playing" (click)="playing=!playing" mat-raised-button color="primary">Stop</button>
+    <button *ngIf="!playing" (click)="playing=!playing" mat-button color="primary">Play</button>
   </mat-grid-tile>
 </mat-grid-list>
