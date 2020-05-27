@@ -28,15 +28,11 @@
     </mat-button-toggle-group>
   </div>
 
-  <!-- <mat-divider></mat-divider> -->
-
   <div mat-line class="top-margin">Volume</div>
   <div mat-line>
     <mat-slider [(ngModel)]="tone.volume" (input)="onInput()" class="wide-slide" [max]="100" [min]="0" [step]="1" [thumbLabel]="true" [tickInterval]="1">
     </mat-slider>
   </div>
-
-  <!-- <mat-divider></mat-divider> -->
 
   <div mat-line class="top-margin">Frequency</div>
   <div mat-line>
