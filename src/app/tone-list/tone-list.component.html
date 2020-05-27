@@ -3,12 +3,11 @@
     <mat-accordion>
       <mat-expansion-panel>
         <mat-expansion-panel-header>
-          <mat-panel-title>{{sampleSound.name}}</mat-panel-title>
-          <mat-panel-description>
-            {{sampleSound.description}}
-          </mat-panel-description>
+          <mat-panel-title>
+            {{sampleSound.name?sampleSound.name:'Unnamed'}}<br>
+            ({{sampleSound.frequency}}Hz {{sampleSound.waveType}} wave at {{sampleSound.volume}}% volume)
+          </mat-panel-title>
         </mat-expansion-panel-header>
-
         <!-- This is the tone controls -->
         <app-tone-controls [(tone)]="sampleSound"></app-tone-controls>
       </mat-expansion-panel>
@@ -23,4 +22,3 @@
 </mat-card>
 
 <pre>{{sampleSound|json}}</pre>
-S

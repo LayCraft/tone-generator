@@ -1,24 +1,41 @@
-<mat-list *ngIf="tone">
-  <div mat-subheader>Volume {{tone.volume ?' - '+tone.volume:''}}</div>
-  <mat-list-item>
-    <mat-slider [(ngModel)]="tone.volume" (input)="onInput()" class="wide-slide" [max]="100" [min]="0" [step]="1" [thumbLabel]="true" [tickInterval]="1">
-    </mat-slider>
-  </mat-list-item>
-  <div mat-subheader>Frequency {{tone.frequency ?' - '+tone.frequency+'Hz':''}}</div>
-  <mat-list-item>
-    <mat-slider [(ngModel)]="tone.frequency" (input)="onInput()" class="wide-slide" [max]="20000" [min]="20" [step]="20" [thumbLabel]="true" [tickInterval]="1000">
-    </mat-slider>
-  </mat-list-item>
-  <div mat-subheader>Waveform {{tone.waveType ?' - '+tone.waveType:''}}</div>
-  <mat-list-item>
+<div *ngIf="tone">
+  <mat-form-field appearance="fill" class="wide-slide">
+    <mat-label>Name</mat-label>
+    <input matInput type="text" [(ngModel)]="tone.name">
+    <button mat-button *ngIf="tone.name" matSuffix mat-icon-button aria-label="Clear" (click)="tone.name=''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+  <mat-form-field appearance="fill" class="wide-slide">
+    <mat-label>Description</mat-label>
+    <textarea matInput type="text" [(ngModel)]="tone.description"></textarea>
+  </mat-form-field>
+
+  <div mat-line>
     <mat-form-field>
       <mat-label>Choose an option</mat-label>
       <mat-select [(ngModel)]="tone.waveType">
-        <mat-option value="sine">Sine</mat-option>
-        <mat-option value="square">Square</mat-option>
-        <mat-option value="sawtooth">Sawtooth</mat-option>
-        <mat-option value="triangle">Triangle</mat-option>
+        <mat-option value="sine">Sine Wave</mat-option>
+        <mat-option value="square">Square Wave</mat-option>
+        <mat-option value="sawtooth">Sawtooth Wave</mat-option>
+        <mat-option value="triangle">Triangle Wave</mat-option>
       </mat-select>
     </mat-form-field>
-  </mat-list-item>
-</mat-list>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <div mat-line class="top-margin">Volume</div>
+  <div mat-line>
+    <mat-slider [(ngModel)]="tone.volume" (input)="onInput()" class="wide-slide" [max]="100" [min]="0" [step]="1" [thumbLabel]="true" [tickInterval]="1">
+    </mat-slider>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <div mat-line class="top-margin">Frequency</div>
+  <div mat-line>
+    <mat-slider [(ngModel)]="tone.frequency" (input)="onInput()" class="wide-slide" [max]="20000" [min]="20" [step]="20" [thumbLabel]="true" [tickInterval]="1000">
+    </mat-slider>
+  </div>
+</div>
