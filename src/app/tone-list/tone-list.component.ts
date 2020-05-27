@@ -18,9 +18,16 @@ export class ToneListComponent implements OnInit {
   play(index: number, playing: boolean) {
 
   }
+
   onChange(index: number, event: ISound) {
     console.log(index, event);
   }
+
+  deleteTone(index: number) {
+    // splice not working as expected
+    this.tones = this.tones.filter((tone: ISound, i: number) => i !== index);
+  }
+
   addTone() {
     this.tones.push({
       name: '',
