@@ -38,4 +38,8 @@ export class ToneListComponent implements OnInit {
       waveType: 'sine'
     });
   }
+  cloneTone(index: number) {
+    // make a shallow copy of the properties
+    this.tones.push({ ...this.tones[index] });
+  }
 }
