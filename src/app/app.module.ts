@@ -22,7 +22,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { IosPopupComponent } from './ios-popup/ios-popup.component';
 import { ToneListComponent } from './tone-list/tone-list.component';
-import { ToneDialogComponent } from './tone-dialog/tone-dialog.component';
+import { ToneControlsComponent } from './tone-controls/tone-controls.component';
 
 
 @NgModule({
@@ -30,7 +30,7 @@ import { ToneDialogComponent } from './tone-dialog/tone-dialog.component';
     AppComponent,
     IosPopupComponent,
     ToneListComponent,
-    ToneDialogComponent,
+    ToneControlsComponent,
   ],
   imports: [
     AppRoutingModule,
