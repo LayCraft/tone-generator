@@ -13,14 +13,14 @@ export class ToneListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    // be sure there is at least one tone
+    if (this.tones.length === 0) {
+      this.addTone();
+    }
   }
 
   play(index: number, playing: boolean) {
-
-  }
-
-  onChange(index: number, event: ISound) {
-    console.log(index, event);
+    this.tones[index].playing = playing;
   }
 
   deleteTone(index: number) {
