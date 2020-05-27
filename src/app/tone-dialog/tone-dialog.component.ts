@@ -9,23 +9,12 @@ import { MatDialogRef } from '@angular/material/dialog';
 })
 export class ToneDialogComponent implements OnInit {
   // The tone dialog takes the basic sound and modifies it in a dialog box. When save is clicked it outputs those values to the parent
-  @Input() tone: ISound;
+  @Input() tone: ISound; // if this is null the component won't render
   @Output() toneChange = new EventEmitter<ISound>();
 
   constructor() { }
 
-  ngOnInit(): void {
-    // if no tone was passed in use the default and emit it
-    if (!this.tone) {
-      this.tone = {
-        frequency: 8000,
-        volume: 100,
-        waveType: 'sine',
-        playing: false
-      };
-      this.onInput();
-    }
-  }
+  ngOnInit(): void { }
   onInput() {
     // when the close button is clicked emit the value and close the dialog
     this.toneChange.emit(this.tone);
