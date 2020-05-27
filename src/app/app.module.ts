@@ -14,13 +14,11 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
-
-
-
 
 import { IosPopupComponent } from './ios-popup/ios-popup.component';
 import { ToneListComponent } from './tone-list/tone-list.component';
@@ -48,10 +46,11 @@ import { ToneDialogComponent } from './tone-dialog/tone-dialog.component';
     MatFormFieldModule,
     MatGridListModule,
     MatIconModule,
+    MatListModule,
     MatSelectModule,
     MatSliderModule,
     MatSnackBarModule,
-    MatToolbarModule
+    MatToolbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
