@@ -1,7 +1,18 @@
 <mat-card>
-  <mat-card-content>Tone 1
-    <app-tone-dialog [(tone)]="sampleSound"></app-tone-dialog>
-    <pre>{{sampleSound|json}}</pre>
+  <mat-card-content>
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>Tones of town</mat-panel-title>
+          <mat-panel-description>
+            Description of tones of town
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <!-- This is the tone controls -->
+        <app-tone-dialog [(tone)]="sampleSound"></app-tone-dialog>
+      </mat-expansion-panel>
+    </mat-accordion>
   </mat-card-content>
   <mat-card-actions>
     <button mat-raised-button color="primary">
@@ -13,3 +24,5 @@
     </button>
   </mat-card-actions>
 </mat-card>
+
+<pre>{{sampleSound|json}}</pre>

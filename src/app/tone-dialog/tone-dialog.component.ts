@@ -15,6 +15,7 @@ export class ToneDialogComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    // if no tone was passed in use the default and emit it
     if (!this.tone) {
       this.tone = {
         frequency: 8000,
@@ -22,6 +23,7 @@ export class ToneDialogComponent implements OnInit {
         waveType: 'sine',
         playing: false
       };
+      this.onInput();
     }
   }
   onInput() {
