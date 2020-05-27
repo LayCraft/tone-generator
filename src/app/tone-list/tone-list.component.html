@@ -3,9 +3,9 @@
     <mat-accordion>
       <mat-expansion-panel>
         <mat-expansion-panel-header>
-          <mat-panel-title>Tones of town</mat-panel-title>
+          <mat-panel-title>{{sampleSound.name}}</mat-panel-title>
           <mat-panel-description>
-            Description of tones of town
+            {{sampleSound.description}}
           </mat-panel-description>
         </mat-expansion-panel-header>
 
@@ -15,14 +15,12 @@
     </mat-accordion>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button color="primary">
-      <mat-icon aria-hidden="false" aria-label="tune">tune</mat-icon>
-    </button>
-    <button mat-raised-button color="primary">
-      <mat-icon aria-hidden="false" aria-label="Mute">volume_mute</mat-icon>
-      <!-- <mat-icon aria-hidden="false" aria-label="Unmute">volume_up</mat-icon> -->
-    </button>
+    <button mat-button>Clone</button>
+    <button mat-raised-button *ngIf="sampleSound.playing" (click)="sampleSound.playing=!sampleSound.playing" color="primary">Stop</button>
+    <button mat-button *ngIf="!sampleSound.playing" (click)="sampleSound.playing=!sampleSound.playing">Play</button>
+
   </mat-card-actions>
 </mat-card>
 
 <pre>{{sampleSound|json}}</pre>
+S

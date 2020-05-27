@@ -8,7 +8,14 @@ import { ISound } from '../interfaces/sound.interface';
 })
 export class ToneListComponent implements OnInit {
 
-  sampleSound: ISound;
+  sampleSound: ISound = {
+    name: 'Tones of Town',
+    description: 'A tone for the ages',
+    frequency: 8000,
+    playing: false,
+    volume: 100,
+    waveType: 'sine'
+  };
   constructor() { }
 
   ngOnInit(): void {
