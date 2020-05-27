@@ -1,7 +1,7 @@
 export interface ISound {
-  description?: string;
+  description: string;
   frequency: number;
-  name?: string;
+  name: string;
   playing: boolean;
   volume: number;
   waveType: string;

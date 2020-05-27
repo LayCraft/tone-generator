@@ -23,5 +23,7 @@
     </mat-card-actions>
   </mat-card>
 </div>
-
+<button (click)="addTone()" class="bottom-right" mat-fab color="primary" aria-label="Add tone button">
+  <mat-icon>add</mat-icon>
+</button>
 <pre>{{tones|json}}</pre>

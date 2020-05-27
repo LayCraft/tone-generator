@@ -8,14 +8,7 @@ import { ISound } from '../interfaces/sound.interface';
 })
 export class ToneListComponent implements OnInit {
 
-  tones: ISound[] = [{
-    name: 'Tones of Town',
-    description: 'A tone for the ages',
-    frequency: 8000,
-    playing: false,
-    volume: 100,
-    waveType: 'sine'
-  }];
+  tones: ISound[] = [];
 
   constructor() { }
 
@@ -28,5 +21,14 @@ export class ToneListComponent implements OnInit {
   onChange(index: number, event: ISound) {
     console.log(index, event);
   }
-
+  addTone() {
+    this.tones.push({
+      name: '',
+      description: '',
+      frequency: 8000,
+      playing: false,
+      volume: 100,
+      waveType: 'sine'
+    });
+  }
 }
