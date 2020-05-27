@@ -1,29 +1,34 @@
 <div *ngIf="tone">
   <mat-form-field appearance="fill" class="wide-slide">
     <mat-label>Name</mat-label>
-    <input matInput type="text" [(ngModel)]="tone.name">
+    <input matInput type="text" [(ngModel)]="tone.name" (input)="onInput()">
     <button mat-button *ngIf="tone.name" matSuffix mat-icon-button aria-label="Clear" (click)="tone.name=''">
       <mat-icon>close</mat-icon>
     </button>
   </mat-form-field>
   <mat-form-field appearance="fill" class="wide-slide">
     <mat-label>Description</mat-label>
-    <textarea matInput type="text" [(ngModel)]="tone.description"></textarea>
+    <textarea matInput type="text" [(ngModel)]="tone.description" (input)="onInput()"></textarea>
   </mat-form-field>
 
-  <div mat-line>
-    <mat-form-field appearance="fill" class="wide-slide">
-      <mat-label>Choose an option</mat-label>
-      <mat-select [(ngModel)]="tone.waveType">
-        <mat-option value="sine">Sine Wave</mat-option>
-        <mat-option value="square">Square Wave</mat-option>
-        <mat-option value="sawtooth">Sawtooth Wave</mat-option>
-        <mat-option value="triangle">Triangle Wave</mat-option>
-      </mat-select>
-    </mat-form-field>
+  <div mat-line class="bottom-margin">
+    <mat-button-toggle-group [(ngModel)]="tone.waveType" #group="matButtonToggleGroup">
+      <mat-button-toggle (click)="onInput()" value="sine" aria-label="Sine Wave">
+        Sine Wave
+      </mat-button-toggle>
+      <mat-button-toggle (click)="onInput()" value="square" aria-label="Square Wave">
+        Square Wave
+      </mat-button-toggle>
+      <mat-button-toggle (click)="onInput()" value="sawtooth" aria-label="Sawtooth Wave">
+        Sawtooth Wave
+      </mat-button-toggle>
+      <mat-button-toggle (click)="onInput()" value="triangle" aria-label="Triangle Wave">
+        Triangle Wave
+      </mat-button-toggle>
+    </mat-button-toggle-group>
   </div>
 
-  <mat-divider></mat-divider>
+  <!-- <mat-divider></mat-divider> -->
 
   <div mat-line class="top-margin">Volume</div>
   <div mat-line>
@@ -31,7 +36,7 @@
     </mat-slider>
   </div>
 
-  <mat-divider></mat-divider>
+  <!-- <mat-divider></mat-divider> -->
 
   <div mat-line class="top-margin">Frequency</div>
   <div mat-line>

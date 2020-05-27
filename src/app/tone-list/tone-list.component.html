@@ -1,25 +1,27 @@
-<mat-card>
-  <mat-card-content>
-    <mat-accordion>
-      <mat-expansion-panel>
-        <mat-expansion-panel-header>
-          <mat-panel-title>
-            {{sampleSound.name?sampleSound.name:'Unnamed'}}<br>
-            ({{sampleSound.frequency}}Hz {{sampleSound.waveType}} wave at {{sampleSound.volume}}% volume)
-          </mat-panel-title>
-        </mat-expansion-panel-header>
-        <!-- This is the tone controls -->
-        <app-tone-controls [(tone)]="sampleSound"></app-tone-controls>
-      </mat-expansion-panel>
-    </mat-accordion>
-  </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>Delete</button>
-    <button mat-button>Clone</button>
-    <button mat-raised-button *ngIf="sampleSound.playing" (click)="sampleSound.playing=!sampleSound.playing" color="primary">Stop</button>
-    <button mat-button *ngIf="!sampleSound.playing" (click)="sampleSound.playing=!sampleSound.playing">Play</button>
+<div *ngFor="let tone of tones; let i=index">
+  <mat-card>
+    <mat-card-content>
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{tone.name?tone.name:'Unnamed'}}<br>
+              ({{tone.frequency}}Hz {{tone.waveType}} wave at {{tone.volume}}% volume)
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <!-- This is the tone controls -->
+          <app-tone-controls [tone]="tone" (toneChange)="onChange(i,$event)"></app-tone-controls>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Delete</button>
+      <button mat-button>Clone</button>
+      <button mat-raised-button *ngIf="tone.playing" (click)="play(i, false)" color="primary">Stop</button>
+      <button mat-button *ngIf="!tone.playing" (click)="play(i,true)">Play</button>
 
-  </mat-card-actions>
-</mat-card>
+    </mat-card-actions>
+  </mat-card>
+</div>
 
-<pre>{{sampleSound|json}}</pre>
+<pre>{{tones|json}}</pre>

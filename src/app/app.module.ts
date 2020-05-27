@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { environment } from '../environments/environment';
 
 import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -43,6 +44,7 @@ import { ToneControlsComponent } from './tone-controls/tone-controls.component';
 
     // material module
     MatButtonModule,
+    MatButtonToggleModule,
     MatCardModule,
     MatExpansionModule,
     MatFormFieldModule,

@@ -18,5 +18,6 @@ export class ToneControlsComponent implements OnInit {
   onInput() {
     // when the close button is clicked emit the value and close the dialog
     this.toneChange.emit(this.tone);
+    console.log(this.tone)
   }
 }
