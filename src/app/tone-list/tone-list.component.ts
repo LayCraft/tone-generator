@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
-import { ToneDialogComponent } from '../tone-dialog/tone-dialog.component';
+import { ISound } from '../interfaces/sound.interface';
 
 @Component({
   selector: 'app-tone-list',
@@ -9,12 +8,10 @@ import { ToneDialogComponent } from '../tone-dialog/tone-dialog.component';
 })
 export class ToneListComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  sampleSound: ISound;
+  constructor() { }
 
   ngOnInit(): void {
   }
 
-  openDialog() {
-    this.dialog.open(ToneDialogComponent);
-  }
 }

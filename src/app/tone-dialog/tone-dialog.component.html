@@ -1,12 +1,12 @@
 <mat-list>
   <div mat-subheader>Volume {{tone.volume ?' - '+tone.volume:''}}</div>
   <mat-list-item>
-    <mat-slider [(ngModel)]="tone.volume" class="wide-slide" [max]="100" [min]="0" [step]="1" [thumbLabel]="true" [tickInterval]="1">
+    <mat-slider [(ngModel)]="tone.volume" (input)="onInput()" class="wide-slide" [max]="100" [min]="0" [step]="1" [thumbLabel]="true" [tickInterval]="1">
     </mat-slider>
   </mat-list-item>
   <div mat-subheader>Frequency {{tone.frequency ?' - '+tone.frequency+'Hz':''}}</div>
   <mat-list-item>
-    <mat-slider [(ngModel)]="tone.frequency" class="wide-slide" [max]="20000" [min]="20" [step]="20" [thumbLabel]="true" [tickInterval]="1000">
+    <mat-slider [(ngModel)]="tone.frequency" (input)="onInput()" class="wide-slide" [max]="20000" [min]="20" [step]="20" [thumbLabel]="true" [tickInterval]="1000">
     </mat-slider>
   </mat-list-item>
   <div mat-subheader>Waveform {{tone.waveType ?' - '+tone.waveType:''}}</div>
@@ -20,8 +20,5 @@
         <mat-option value="triangle">Triangle</mat-option>
       </mat-select>
     </mat-form-field>
-  </mat-list-item>
-  <mat-list-item>
-    <button (click)="onSave()" mat-raised-button color="primary">Save</button>
   </mat-list-item>
 </mat-list>

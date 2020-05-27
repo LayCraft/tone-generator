@@ -1,7 +1,10 @@
 <mat-card>
-  <mat-card-content>Tone 1</mat-card-content>
+  <mat-card-content>Tone 1
+    <app-tone-dialog [(tone)]="sampleSound"></app-tone-dialog>
+    <pre>{{sampleSound|json}}</pre>
+  </mat-card-content>
   <mat-card-actions>
-    <button (click)="openDialog()" mat-raised-button color="primary">
+    <button mat-raised-button color="primary">
       <mat-icon aria-hidden="false" aria-label="tune">tune</mat-icon>
     </button>
     <button mat-raised-button color="primary">
