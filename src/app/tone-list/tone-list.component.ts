@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ISound } from '../interfaces/sound.interface';
+import { uuidv4 } from '../functions/uuidv4';
 
 @Component({
   selector: 'app-tone-list',
@@ -36,7 +37,8 @@ export class ToneListComponent implements OnInit {
       frequency: 8000,
       playing: false,
       volume: 100,
-      waveType: 'sine'
+      waveType: 'sine',
+      uuid: uuidv4()
     };
 
     // add a tone
