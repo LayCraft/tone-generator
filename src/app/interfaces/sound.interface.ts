@@ -5,4 +5,5 @@ export interface ISound {
   playing: boolean;
   volume: number;
   waveType: string;
+  uuid?: string;
 }
