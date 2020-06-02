@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ISound } from '../interfaces/sound.interface';
 import { uuidv4 } from '../functions/uuidv4';
+import { AudioPlayerService } from '../audio-player.service';
 
 @Component({
   selector: 'app-tone-list',
@@ -10,7 +11,7 @@ import { uuidv4 } from '../functions/uuidv4';
 export class ToneListComponent implements OnInit {
   tones: ISound[] = [];
 
-  constructor() { }
+  constructor(private audioPlayerService: AudioPlayerService) { }
 
   ngOnInit(): void {
     // be sure there is at least one tone
@@ -21,7 +22,7 @@ export class ToneListComponent implements OnInit {
 
   updateAudio() {
     // this sends the tones to the sound service so it can play them
-    console.log('Updating audio');
+    this.audioPlayerService.setTones(this.tones);
   }
 
   deleteTone(index: number) {
@@ -44,25 +45,11 @@ export class ToneListComponent implements OnInit {
     // add a tone
     this.tones.push(defaultTone);
     this.updateAudio();
-    // // add a matching oscillator
-    // const oscillator = this.context.createOscillator();
-    // // set oscillator type
-    // oscillator.type = defaultTone.waveType;
-    // oscillator.frequency.value = defaultTone.frequency;
-    // oscillator.connect(this.context.destination);
-
-    // // add a gain to the context
-    // const gain = this.context.createGain();
-    // gain.gain.value = defaultTone.volume;
-    // gain.connect(oscillator.frequency);
-
-    // // add it to ready list
-    // this.oscillators.push(oscillator);
   }
 
   cloneTone(index: number) {
-    // make a shallow copy of the properties
-    this.tones.push({ ...this.tones[index] });
+    // make a shallow copy of the properties generate a new uuid
+    this.tones.push({ ...this.tones[index], uuid: uuidv4() });
     this.updateAudio();
   }
 }
