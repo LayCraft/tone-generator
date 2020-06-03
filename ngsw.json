@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1590624804453,
+  "timestamp": 1591206522332,
   "index": "https://laycraft.github.io/tone-generator/index.html",
   "assetGroups": [
     {
@@ -10,8 +10,8 @@
       "urls": [
         "https://laycraft.github.io/tone-generator/favicon.ico",
         "https://laycraft.github.io/tone-generator/index.html",
-        "https://laycraft.github.io/tone-generator/main-es2015.47c7503f211b96deac2d.js",
-        "https://laycraft.github.io/tone-generator/main-es5.47c7503f211b96deac2d.js",
+        "https://laycraft.github.io/tone-generator/main-es2015.4acd87d19295817fbcf2.js",
+        "https://laycraft.github.io/tone-generator/main-es5.4acd87d19295817fbcf2.js",
         "https://laycraft.github.io/tone-generator/manifest.webmanifest",
         "https://laycraft.github.io/tone-generator/polyfills-es2015.690002c25ea8557bb4b0.js",
         "https://laycraft.github.io/tone-generator/polyfills-es5.9e286f6d9247438cbb02.js",
@@ -51,9 +51,9 @@
     "https://laycraft.github.io/tone-generator/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "https://laycraft.github.io/tone-generator/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "https://laycraft.github.io/tone-generator/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://laycraft.github.io/tone-generator/index.html": "b9a8afd46eb5b771abff0a95e4000c483e48b787",
-    "https://laycraft.github.io/tone-generator/main-es2015.47c7503f211b96deac2d.js": "5936c059cf3e788b46f8125d6af322faa77b20fe",
-    "https://laycraft.github.io/tone-generator/main-es5.47c7503f211b96deac2d.js": "fd7b3872b14992026d698e87e5282642df4ed837",
+    "https://laycraft.github.io/tone-generator/index.html": "583e7b39a5b600dfa863c08170304e7cb6ceaa3e",
+    "https://laycraft.github.io/tone-generator/main-es2015.4acd87d19295817fbcf2.js": "ffba0d09c9d8ade352d9484024817588e7586d4e",
+    "https://laycraft.github.io/tone-generator/main-es5.4acd87d19295817fbcf2.js": "b589725f41e43ec883cf62c080862f9c4d57cfcb",
     "https://laycraft.github.io/tone-generator/manifest.webmanifest": "ddc054a6969ac97d588f40a848bef6f37b843fe8",
     "https://laycraft.github.io/tone-generator/polyfills-es2015.690002c25ea8557bb4b0.js": "72ad4ccc0a3916ae4598199447cdeadd6d380570",
     "https://laycraft.github.io/tone-generator/polyfills-es5.9e286f6d9247438cbb02.js": "89222a28dbabb780fc372d33834080e0cd3083d9",
